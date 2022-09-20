@@ -1,4 +1,4 @@
-const { chromium, firefox, webkit } = require('playwright');
+import { chromium } from 'playwright';
 
 (async () => {
   const browser = await chromium.launch();  // Or 'firefox' or 'webkit'.
