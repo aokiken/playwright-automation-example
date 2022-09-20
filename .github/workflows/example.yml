@@ -1,0 +1,15 @@
+name: example
+on:
+  workflow_dispatch:
+jobs:
+  create-test-shop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: yarn install --pure-lockfile --network-concurrency 1
+      - run: npx playwright install
+      - run: yarn run ts-node scripts/example.ts
+
