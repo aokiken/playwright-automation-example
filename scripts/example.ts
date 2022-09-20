@@ -5,5 +5,6 @@ const { chromium, firefox, webkit } = require('playwright');
   const page = await browser.newPage();
   await page.goto('http://example.com');
   // other actions...
+  await page.pause();
   await browser.close();
 })();
