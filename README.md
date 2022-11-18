@@ -4,7 +4,7 @@
 
 ```shell
 $ yarn install
-$ npx playwright install 
+$ yarn playwright install chromium
 ```
 
 ## Usage
